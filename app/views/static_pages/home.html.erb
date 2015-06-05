@@ -1,0 +1,12 @@
+<div class="container-home">  
+  <div class="content">
+   
+    <center> <h1>Reach your goals</h1>
+    <p>Create daily tasks and track your goals.</p></center>
+     <p> <%= current_user %></p>
+     <%= link_to "Log out", destroy_user_session_path, method: "delete" %>
+    <%= render "devise/registrations/new" %><br>
+    <%= render "devise/sessions/new" %>
+  
+  </div>
+</div>
