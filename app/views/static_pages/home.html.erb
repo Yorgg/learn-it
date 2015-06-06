@@ -4,7 +4,9 @@
     <center> <h1>Reach your goals</h1>
     <p>Create daily tasks and track your goals.</p></center>
      <p> <%= current_user %></p>
-     <%= link_to "Log out", destroy_user_session_path, method: "delete" %>
+     <% if current_user %>
+       <%= link_to "Log out", destroy_user_session_path, method: "delete" %>
+     <% end %>
     <%= render "devise/registrations/new" %><br>
     <%= render "devise/sessions/new" %>
   
