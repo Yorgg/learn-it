@@ -5,4 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :tasks
   validates :name, presence: true, length: { minimum: 4, maximum: 16 }
+
+  def self.today_tasks
+  	where(date: Date.yesterday.in_time_zone)
+  end
+
+  def self.tomorrow_tasks
+  	where(date: Date.tomorrow.in_time_zone)  
+  end
+
+  
 end

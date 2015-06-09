@@ -16,6 +16,58 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-	 background-color: #f9f9f9;
+.user-col {
+	padding-top: 30px;
+	padding-right: 22px;
+	width: 190px;
+	background-color: #f8f8f8;
+	float: left;
+	position: fixed;
+	height: 100%;
+	border-color: #f1f1f1;
+	border-right-style: solid;
+	border-width: 2px;
+	ul {	 
+      li {
+      	text-transform: uppercase;
+        list-style: none;
+        margin-left: 0px;
+        font-size: 12px;
+        font-weight: 700;
+		color: #bdbdbd;
+      a {
+        color: #bdbdbd;
+      }
+      li:hover{	
+        color: #5AB953; 
+      }
+    }
+  }
 }
+
+.righty {
+  margin-left: 225px;
+  padding-top: 30px; 
+}
+
+.header {
+  color: #585858;
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.user-tasks {	
+  li {
+    color: #7e7e7e;
+    font-size: 19px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    margin-left: 0px
+}
+}
+
+ 
+ 
+
+

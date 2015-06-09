@@ -1,1 +1,52 @@
-<p>Welcome <%= @user.name %>, this site is currently under development</p>
+ 
+<nav class="user-col">
+  <ul>
+    <li><%= @user.name %></li>
+    <hr> 
+    <li><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings </li>
+    <hr>
+    <li><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> <%= link_to "Task", new_task_path %> </li>
+    <hr>
+    <li><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+ <%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>    
+   </ul>
+</nav>
+
+<div class="container righty"> 
+  <img src="http://i.stack.imgur.com/JKxGL.png"></img><br><br><br>
+  <section class ="user-tasks">
+    <div class="row"> 
+      <div class="col-md-2">
+        <p class="header">Today's Tasks: </p>
+      </div> 
+
+	  <div class="col-sm-8">      
+        <ol>      
+          <% @today_tasks.each do |t| %>
+            <li>
+              <%= t.name %>
+            </li>
+           <% end %>
+        </ol> 
+	  </div>
+    </div>
+  </section>
+ 
+  <section class ="user-tasks">
+    <div class="row"> 
+      <div class="col-md-2">
+        <p class="header">Tomorrow's Tasks: </p>
+      </div> 
+
+	  <div class="col-sm-6">      
+        <ol>      
+          <% @tomorrow_tasks.each do |t| %>
+            <li>
+              <%= t.name %>
+            </li>
+           <% end %>
+        </ol> 
+	  </div>
+    </div>
+  </section>
+</div>

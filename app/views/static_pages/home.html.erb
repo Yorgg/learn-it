@@ -5,7 +5,7 @@
     <p>Create daily tasks and track your goals.</p></center>
      <p> <%= current_user %></p>
      <% if current_user %>
-       <%= link_to "Log out", destroy_user_session_path, method: "delete" %>
+       <%= link_to "Account", user_path(current_user.id) %>
      <% end %>
     <%= render "devise/registrations/new" %><br>
     <%= render "devise/sessions/new" %>
