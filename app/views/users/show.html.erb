@@ -1,7 +1,7 @@
  
 <nav class="user-col">
   <ul>
-    <li><%= @user.name %></li>
+    <li><%= current_user.name %></li>
     <hr> 
     <li><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings </li>
     <hr>
@@ -32,6 +32,7 @@
     </div>
   </section>
  
+ <br>
   <section class ="user-tasks">
     <div class="row"> 
       <div class="col-md-2">
