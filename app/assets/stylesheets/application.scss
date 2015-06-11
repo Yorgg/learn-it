@@ -34,9 +34,9 @@
         margin-left: 0px;
         font-size: 12px;
         font-weight: 700;
-		color: #bdbdbd;
+		color: #7f7f7f;
       a {
-        color: #bdbdbd;
+        color: #7f7f7f;
       }
       li:hover{	
         color: #5AB953; 
@@ -60,11 +60,16 @@
 .user-tasks {	
   li {
     color: #7e7e7e;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 200;
     margin-bottom: 10px;
     margin-left: 0px
 }
+}
+
+.records {
+  font-weight: 800;
+  font-size: 30px;
 }
 
  
