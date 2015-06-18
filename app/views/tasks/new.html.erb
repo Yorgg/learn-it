@@ -1,16 +1,19 @@
 <nav class="user-col">
   <ul>
-    <li> <%= link_to current_user.name, user_path(current_user.id)%></li>
-    <hr> 
-    <li><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings </li>
-    <hr>
-    <li><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> <%= link_to "Planner", new_task_path %> </li>
-    <hr>
-    <li><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
- <%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>    
-   </ul>
+    <li> <%= link_to current_user.name, user_path(current_user.id)%></li><hr> 
+    <li>
+      <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings 
+    </li><hr>
+    <li>
+      <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> 
+      <%= link_to "Days", new_task_path %> 
+    </li><hr>
+    <li>
+      <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+      <%= link_to "Log out", destroy_user_session_path, method: "delete" %>
+    </li>    
+  </ul>
 </nav>
-
 
 <div class="container righty"> 
   <div class="row">

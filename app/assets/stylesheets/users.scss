@@ -58,6 +58,23 @@ strike {
   }
 }
 
+.add {
+  cursor: pointer; 
+  cursor: hand;
+  color: #ddd;
+  font-weight: 200;
+  font-size: 26px;
+  padding-left: 17px;
+  a {
+    color: #999;
+  }
+
+  &:hover {
+    color: #999;
+  }
+}
+
+
 .item {
   
 }
