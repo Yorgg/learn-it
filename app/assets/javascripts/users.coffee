@@ -5,8 +5,8 @@
 $(document).on "page:change", ->
   $('div[id^="task-"]').hover( ->
     item = $(this)        
-    item.find('.icons').show()
+    item.find('.icons').show(300)
   ,->
-    $(this).find('.icons').hide())
+    $(this).find('.icons').hide(300))
  
  
