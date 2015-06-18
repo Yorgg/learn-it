@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on "page:change", ->
-  $('div[id^="task-"]').hover( ->
+  $('div[id^="task-"]').hoverIntent( ->
     item = $(this)        
     item.find('.icons').show(300)
   ,->
