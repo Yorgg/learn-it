@@ -4,7 +4,7 @@
     <hr> 
     <li><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings </li>
     <hr>
-    <li><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> <%= link_to "Task", new_task_path %> </li>
+    <li><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> <%= link_to "Planner", new_task_path %> </li>
     <hr>
     <li><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
  <%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>    
@@ -13,11 +13,9 @@
 
 
 <div class="container righty"> 
-<div class="row">
-<div class="col-md-6">
-
-<%= render 'task_form' %>
-
-</div>
-</div>
+  <div class="row">
+    <div class="col-md-6">
+      <%= render 'task_form' %>
+    </div>
+  </div>
 </div>

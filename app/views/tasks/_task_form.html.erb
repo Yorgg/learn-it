@@ -1,11 +1,4 @@
  
-<script>
-  jQuery(function() {
-  var tz = jstz.determine();
-  $.cookie('timezone', tz.name(), { path: '/' });
-  }); 
- </script>
-
  <%= form_for(@task) do |f| %>
   <%= f.label :Day %>
   <%= f.date_field :date, class: 'form-control' %> 

@@ -1,3 +1,79 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.icons {
+  margin-bottom: 24px;
+  display: none;
+}
+
+.user-tasks {
+
+  margin-top: 20px;
+}
+
+strike {
+    text-decoration: none;
+    background-image: linear-gradient(transparent 7px,#cc1f1f 7px,#88C425 9px,transparent 9px);
+}
+ 
+.to-do {
+  padding: 4px 15px; 
+  color: #7f7f7f;
+}
+
+.complete{
+  color: #88C425 !important;
+  text-decoration: line-through;
+}
+
+.check-box {
+  color: #ddd;
+  position: relative;
+  float: left;
+  font-size: 19px;
+  padding-left: 15px;
+  a {
+    color: #ddd;
+  }
+
+  &:hover {
+    text-decoration: initial !important;
+    color: #88C425;
+  }
+}
+
+.delete {
+  color: #ddd;
+  font-size: 19px;
+  padding-left: 16px;
+  a {
+    color: #ddd;
+  }
+
+  &:hover {
+    color: #999;
+  }
+}
+
+.item {
+  
+}
+
+.pencil {
+  color: #ddd;
+  position: relative;
+  float: left;
+  font-size: 19px;
+  padding-left: 15px;
+  a {
+    color: #ddd;
+  }
+
+  &:hover {
+    text-decoration: initial !important;
+    color: #88C425;
+  }
+}
