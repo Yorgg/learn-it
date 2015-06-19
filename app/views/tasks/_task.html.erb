@@ -1,4 +1,17 @@
-  <div id="task-<%=task.id%>">
+
+<div id="entire-task-<%=task.id%>">
+<% if task.complete %>
+  <%= link_to edit_task_path(task.id), :remote => true  do %>
+    <span class="glyphicon-check check-box glyphicon" aria-hidden="true"></span>
+  <% end %>
+<% else %>
+  <%= link_to edit_task_path(task.id), :remote => true  do %>
+    <span class="glyphicon-unchecked check-box glyphicon" aria-hidden="true"></span>
+  <% end %>
+<% end %>
+
+
+  <div id="task-<%=task.id%>">    
     <% if task.complete == true %>
       <li class = 'to-do complete'>
     <% else %>
@@ -6,10 +19,6 @@
     <% end %> <%= task.name %></li>   
 
     <section class="icons">
-      <%= link_to edit_task_path(task.id), :remote => true  do %>
-        <span class="glyphicon glyphicon-check check-box" aria-hidden="true"></span>
-      <% end %>
-
       <%= link_to edit_task_path(task.id), :remote => true  do %>
         <span class="glyphicon glyphicon-pencil pencil" aria-hidden="true"></span>
       <% end %>
@@ -20,3 +29,4 @@
     </section>
 
   </div>
+</div>

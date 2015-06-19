@@ -23,6 +23,7 @@ strike {
 .to-do {
   padding: 4px 15px; 
   color: #444;
+  list-style: none;
 }
 
 .complete{
@@ -36,6 +37,7 @@ strike {
 .icons {
   display: none;
   padding-bottom: 24px;
+  margin-left: 40px;
 }
 
 //*** ICONS ***//
@@ -49,6 +51,8 @@ strike {
 .check-box {
   @extend .icon-style;
   position: relative;
+  padding-top: 4px;
+  margin-right: 20px;
   float: left;
   &:hover {
     text-decoration: initial !important;

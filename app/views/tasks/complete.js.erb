@@ -1,3 +1,4 @@
 var taskId = <%= @task.id %>;
 $('#task-' + taskId).find('.to-do').toggleClass('complete');
- 
+$('#entire-task-' + taskId).find('.check-box').toggleClass('glyphicon-check glyphicon-unchecked');
+
