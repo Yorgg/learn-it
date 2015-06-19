@@ -1,25 +1,22 @@
-<% @today_tasks.each do |t| %>
-  <div id="task-<%=t.id%>">
-    <% if t.complete == true %>
+  <div id="task-<%=task.id%>">
+    <% if task.complete == true %>
       <li class = 'to-do complete'>
     <% else %>
       <li class = 'to-do'>
-    <% end %> <%= t.name %></li>   
+    <% end %> <%= task.name %></li>   
 
-    
     <section class="icons">
-      <%= link_to edit_task_path(t.id), :remote => true  do %>
+      <%= link_to edit_task_path(task.id), :remote => true  do %>
         <span class="glyphicon glyphicon-check check-box" aria-hidden="true"></span>
       <% end %>
 
-      <%= link_to edit_task_path(t.id), :remote => true  do %>
+      <%= link_to edit_task_path(task.id), :remote => true  do %>
         <span class="glyphicon glyphicon-pencil pencil" aria-hidden="true"></span>
       <% end %>
 
-      <%= link_to task_path(t.id), method: :delete, :remote => true  do %>
+      <%= link_to task_path(task.id), method: :delete, :remote => true  do %>
         <span class="glyphicon glyphicon-trash delete" aria-hidden="true"></span>
       <% end %>
     </section>
 
   </div>
-<% end %>

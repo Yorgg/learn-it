@@ -1,0 +1,13 @@
+var task = '<%= j render @task%>';
+$('#today-list').append(task);
+$('.today-task-field').val('');
+
+//TO DO: make code below DRY (it's repeated in coffeescript)
+$('div[id^="task-"]').hoverIntent(function() {
+  var item;
+  item = $(this);
+  return item.find('.icons').show(300);
+}, function() {
+  return $(this).find('.icons').hide(300);
+});
+

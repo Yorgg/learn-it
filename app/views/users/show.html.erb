@@ -1,4 +1,4 @@
- <nav class="user-col">
+<nav class="user-col">
   <ul>
     <li><%= current_user.name %></li>
     <hr> 
@@ -12,18 +12,20 @@
 </nav>
 
 <div class="container righty"> 
-  <section class ="user-tasks">
+  <section class ="today-tasks">
     <div class="row"> 
       <div class="col-md-2">
         <p class="header">Today's Tasks: </p>
+        <p> 
       </div> 
 
 	    <div class="col-md-6">      
-        <ol>      
-          <%= render 'tasks/tasks' %> 
+        <ol id ='today-list'>      
+          <%= render @tasks %> 
         </ol>
         <hr>
-        <span class="glyphicon glyphicon-plus-sign add" aria-hidden="true"></span>  
+        <div class='add-today'><%= render 'tasks/add_task_form' %> <span class="cancel">cancel</span></div>
+        <div class='add-task-button'>Add task</div>
 	    </div>
     </div>
   </section>

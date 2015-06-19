@@ -1,3 +1,113 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$green: #5cb85c;
+
+.today-tasks {	
+  margin-top: 20px;
+  li {
+    color: #585858;
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-left: 0px
+  }
+}
+
+strike {
+    text-decoration: none;
+    background-image: linear-gradient(transparent 7px,#cc1f1f 7px,#88C425 9px,transparent 9px);
+}
+ 
+.to-do {
+  padding: 4px 15px; 
+  color: #444;
+}
+
+.complete{
+  color: $green !important;
+  text-decoration: line-through;
+}
+
+
+//*** CONTAINER FOR ICONS ***///
+
+.icons {
+  display: none;
+  padding-bottom: 24px;
+}
+
+//*** ICONS ***//
+
+.icon-style {
+  color: #ddd;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.check-box {
+  @extend .icon-style;
+  position: relative;
+  float: left;
+  &:hover {
+    text-decoration: initial !important;
+    color: $green;
+  }
+}
+
+.pencil {
+  @extend .icon-style;
+  float: left;
+  &:hover {
+    text-decoration: initial !important;
+    color: #ECBE13;
+  }
+}
+
+.delete {
+  @extend .icon-style;
+  &:hover {
+    color: #222;
+  }
+}
+
+//*** Extension ***//
+
+.hand-cursor {
+  cursor: pointer; 
+  cursor: hand;	
+}
+
+.add {
+  @extend .hand-cursor;
+  color: #999;
+  font-weight: 200;
+  font-size: 26px;
+  padding-left: 17px;
+
+  &:hover {
+    color: #585858;
+  }
+}
+
+.add-today {
+  padding-left: 15px;
+  display: none;
+}
+
+.cancel {
+  @extend .hand-cursor;
+  color: #999;
+  display: inline;
+  float: left;
+  padding-top: 6px;
+  padding-left: 18px;
+}
+
+.add-task-button {
+  color: #999;
+  text-decoration: underline;
+  @extend .hand-cursor;
+  padding-left: 12px;
+}

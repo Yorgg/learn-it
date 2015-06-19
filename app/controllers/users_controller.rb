@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   def show
+  	@task = Task.new
   	@user = current_user
-  	@today_tasks = @user.tasks.where(date: Date.today)
+  	@tasks = @user.tasks.where(date: Date.today)
   	@tomorrow_tasks = @user.tasks.where(date: Date.today+1)  	
   end 
 end

@@ -7,10 +7,15 @@ class TasksController < ApplicationController
   def create
     @task = current_user.tasks.build(task_params)
     if @task.save      
-      redirect_to user_path(current_user.id)
+      respond_to do |format|
+        format.html {redirect_to user_path(current_user.id)}
+        format.js { render :action => "add_task.js.erb" }
+      end 
     else
       render 'new'
     end
+
+
   end
 
   def edit
