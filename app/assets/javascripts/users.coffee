@@ -3,10 +3,15 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on "page:change", ->
-  
-  $('div[id^="task-"]').hoverIntent( ->
-    item = $(this)        
-    item.find('.icons').show(300)
+
+  currentHover =
+    element:  0
+
+  $('div[id^="entire-task-"]').hoverIntent( ->
+    
+    element = $(this) 
+    currentHover.element = element
+    element.find('.icons').show(300)
   ,->
     $(this).find('.icons').hide(300))
 
@@ -20,4 +25,23 @@ $(document).on "page:change", ->
     $('.add-today').hide()
     $('.add-task-button').show()
   )
+
+  $('.pencil').click( ->
+    currentHover.element.find('.edit-task-form').show()
+
+
+    selectedTask = currentHover.element.find('.to-do').text()
+
+    currentHover.element.find('.edit-task-field').val(selectedTask.trim())
+    currentHover.element.find('.all-list-data').toggle()
+    currentHover.element.find('.edit-task-field').focus()
+
+ 
+  )
+
+  $('.edit-cancel').click( ->
+    currentHover.element.find('.edit-task-form').hide()
+    currentHover.element.find('.all-list-data').show()
+  )
+
  

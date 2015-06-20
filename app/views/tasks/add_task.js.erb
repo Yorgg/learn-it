@@ -1,15 +1,27 @@
 var task = '<%= j render @task%>';
 $('#today-list').append(task);
-$('.today-task-field').val('');
+$('.add-task-field').val('');
+$('#new_task').hide();
+$('.add-today').hide()
+$('.add-task-button').show()
 
 //TO DO: make code below DRY (it's repeated in coffeescript)
-$('div[id^="task-"]').hoverIntent(function() {
-  var item;
-  item = $(this);
-  return item.find('.icons').show(300);
-}, function() {
-  return $(this).find('.icons').hide(300);
-});
+$('div[id^="entire-task-<%= @task.id %>"]').hoverIntent(function() {
+  
+  var item = $(this);
 
+  $(this).find('.pencil').click(function() {
+    item.find('.edit-task-form').show();
+    var selectedTask = item.find('.to-do').text();
+    item.find('.edit-task-field').val(selectedTask.trim());
+    item.find('.all-list-data').toggle();
+    item.find('.edit-task-field').focus();
+  });
+
+  $(this).find('.icons').show(300);
+}, function() {
+  $(this).find('.icons').hide(300);
+});
+ 
 
 

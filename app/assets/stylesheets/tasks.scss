@@ -4,6 +4,7 @@
 
 $green: #5cb85c;
 
+
 .today-tasks {	
   margin-top: 20px;
   li {
@@ -24,11 +25,41 @@ strike {
   padding: 4px 15px; 
   color: #444;
   list-style: none;
+  &:after { 
+   content: "";
+   display: block; 
+   clear: both;
+  }
 }
 
 .complete{
   color: $green !important;
   text-decoration: line-through;
+}
+
+
+.entire-task {
+  &:after { 
+   content: "";
+   display: block; 
+   clear: both;
+  }
+  margin-bottom: 5px;
+}
+
+//*** CONTAINER FOR EDIT TASK FIELD ***//
+
+.edit-task-form {
+  position: relative;
+  float: left;
+  display :none;
+   width: 400px;
+   margin-bottom: 25px;
+}
+
+.edit-task-field {
+  margin-top: 4px;
+  width: 400px;
 }
 
 
@@ -62,6 +93,7 @@ strike {
 
 .pencil {
   @extend .icon-style;
+  @extend .hand-cursor;
   float: left;
   &:hover {
     text-decoration: initial !important;
@@ -89,6 +121,7 @@ strike {
   font-weight: 200;
   font-size: 26px;
   padding-left: 17px;
+  padding-right: 17px;
 
   &:hover {
     color: #585858;
@@ -97,14 +130,22 @@ strike {
 
 .add-today {
   padding-left: 15px;
+  padding-right: 15px;
   display: none;
+}
+
+.edit-cancel {
+  @extend .hand-cursor;
+  color: #999;
+  display: inline;
+  padding-top: 6px;
+  padding-left: 18px;	
 }
 
 .cancel {
   @extend .hand-cursor;
   color: #999;
   display: inline;
-  float: left;
   padding-top: 6px;
   padding-left: 18px;
 }

@@ -1,0 +1,8 @@
+var taskId = <%= @task.id %>;
+var currentElement = $('#entire-task-' + taskId)
+
+$('#task-' + taskId).find('.to-do').html("<%= @task.name %>");
+currentElement.find('.edit-task-form').hide()
+currentElement.find('.all-list-data').toggle()
+
+ 

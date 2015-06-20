@@ -17,19 +17,36 @@
 @import "bootstrap";
 
 
+// TO DO: clean this area, did an ugly hack to fix a button sizing issue //
 
-.style-4 input[type="text"] {
-  padding: 10px;
-  border: none;
+textarea:hover,  
+textarea:active, 
+input:active, 
+textarea:focus, 
+{
+  outline: 0px !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+input:focus[type="text"],
+input[type="text"] {
+
+  outline: 0px !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+
+  padding: 5px;
+  margin-bottom: 10px;
   width: 100%;
-  border-bottom: solid 2px #c9c9c9;
+  border: solid 2px #ddd;
   transition: border 0.3s;
+  border-radius: 3px;
 }
-.style-4 input[type="text"]:focus,
-.style-4 input[type="text"].focus {
-  border-bottom: solid 2px #969696;
-}
-
+ 
+// ** //
 
 
 

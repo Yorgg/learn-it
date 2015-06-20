@@ -18,14 +18,24 @@ class TasksController < ApplicationController
 
   end
 
-  def edit
+  def update
     @task = current_user.tasks.find(params[:id])
-    @task.complete = !(@task.complete)
-    if @task.save      
-      respond_to do |format|
-        format.html {redirect_to user_path(current_user.id)}
-        format.js { render :action => "complete.js.erb" }
-      end 
+    if params[:status] == 'change'
+      @task.complete = !(@task.complete)
+      if @task.save      
+        respond_to do |format|
+          format.html {redirect_to user_path(current_user.id)}
+          format.js { render :action => "complete.js.erb" }
+        end 
+      end
+    else
+      @task.name = params[:task][:name]
+      if @task.save      
+        respond_to do |format|
+          format.html {redirect_to user_path(current_user.id)}
+          format.js { render :action => "edit.js.erb" }
+        end 
+      end
     end
   end
 
@@ -41,6 +51,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :date)
+    params.require(:task).permit(:name, :date, :complete)
   end
 end

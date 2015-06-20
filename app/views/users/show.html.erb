@@ -16,15 +16,16 @@
     <div class="row"> 
       <div class="col-md-2">
         <p class="header">Today's Tasks: </p>
-        <p> 
       </div> 
 
 	    <div class="col-md-6">      
         <div id ='today-list'>      
           <%= render @tasks %> 
+        </div><hr>
+
+        <div class='add-today'><%= render 'tasks/add_task_form' %>  
         </div>
-        <hr>
-        <div class='add-today'><%= render 'tasks/add_task_form' %> <span class="cancel">cancel</span></div>
+
         <div class='add-task-button'>Add task</div>
 	    </div>
     </div>
