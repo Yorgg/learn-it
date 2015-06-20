@@ -1,7 +1,6 @@
 var task = '<%= j render @task%>';
 $('#today-list').append(task);
 $('.add-task-field').val('');
-$('#new_task').hide();
 $('.add-today').hide()
 $('.add-task-button').show()
 
@@ -18,10 +17,14 @@ $('div[id^="entire-task-<%= @task.id %>"]').hoverIntent(function() {
     item.find('.edit-task-field').focus();
   });
 
+  $(this).find('.edit-cancel').click(function() {
+    item.find('.edit-task-form').hide();
+    item.find('.all-list-data').show();
+  });
+
+
   $(this).find('.icons').show(300);
 }, function() {
   $(this).find('.icons').hide(300);
 });
  
-
-
