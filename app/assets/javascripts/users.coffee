@@ -7,11 +7,10 @@ $(document).on "page:change", ->
   currentHover =
     element:  0
 
-  $('div[id^="entire-task-"]').hoverIntent( ->
+  $('.entire-task').hoverIntent( ->
     
-    element = $(this) 
-    currentHover.element = element
-    element.find('.icons').show(300)
+    currentHover.element = $(this) 
+    $(this) .find('.icons').show(300)
   ,->
     $(this).find('.icons').hide(300))
 
@@ -28,7 +27,6 @@ $(document).on "page:change", ->
 
   $('.pencil').click( ->
     currentHover.element.find('.edit-task-form').show()
-
 
     selectedTask = currentHover.element.find('.to-do').text()
 

@@ -1,4 +1,4 @@
-<div id="entire-task-<%=task.id%>" class="entire-task">
+<div id="task-container-<%=task.id%>">
   <% if task.complete %>
     <%= link_to task_path(id: task.id, status: 'change'), {:method => :patch, :remote => true} do %>
       <span class="glyphicon-check check-box glyphicon" aria-hidden="true"></span>
@@ -9,7 +9,8 @@
     <% end %>
   <% end %>
 
-  <div id="edit-task-<%=task.id%>" class="edit-task-form">
+<div class="entire-task">
+  <div class="edit-task-form">
     <%= form_for(task, remote: true)  do |f| %>
       <%= f.text_field :name, class: 'edit-task-field' %> 
       <%= f.hidden_field :date, :value => Date.today %>
@@ -18,7 +19,7 @@
     <% end %>
   </div>
 
-  <div id="task-<%=task.id%>" class="all-list-data">    
+  <div class="all-list-data">    
     <% if task.complete == true %>
       <li class = 'to-do complete'>
     <% else %>
@@ -32,4 +33,5 @@
       <% end %>
     </section>
   </div>
+</div>
 </div>
