@@ -15,12 +15,3 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-
-
-$(document).on("page:fetch", function(){
-  $(".spinner").show();
-});
-
-$(document).on("page:receive", function(){
-  $(".spinner").hide();
-});
