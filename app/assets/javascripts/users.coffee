@@ -41,5 +41,4 @@ $(document).on "page:change", ->
     currentHover.element.find('.edit-task-form').hide()
     currentHover.element.find('.all-list-data').show()
   )
-
  

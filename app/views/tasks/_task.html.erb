@@ -9,29 +9,30 @@
     <% end %>
   <% end %>
 
-<div class="entire-task">
-  <div class="edit-task-form">
-    <%= form_for(task, remote: true)  do |f| %>
-      <%= f.text_field :name, class: 'edit-task-field' %> 
-      <%= f.hidden_field :date, :value => Date.today %>
-      <br>
-      <%= f.submit "Edit", class: "btn btn-success btn-sm" %><span class="edit-cancel">cancel</span>
-    <% end %>
-  </div>
-
-  <div class="all-list-data">    
-    <% if task.complete == true %>
-      <li class = 'to-do complete'>
-    <% else %>
-      <li class = 'to-do'>
-    <% end %> <%= task.name %></li>   
-
-    <section class="icons">
-      <span class="glyphicon glyphicon-pencil pencil" aria-hidden="true"></span>
-      <%= link_to task_path(task.id), method: :delete, :remote => true  do %>
-        <span class="glyphicon glyphicon-trash delete" aria-hidden="true"></span>
+  <div class="entire-task">
+  
+    <div class="edit-task-form">
+      <%= form_for(task, remote: true)  do |f| %>
+          <%= f.text_field :name, class: 'edit-task-field' %> 
+        <%= f.hidden_field :date, :value => Date.today %>
+        <br>
+        <%= f.submit "Update", class: "btn btn-success btn-sm" %><span class="edit-cancel">cancel</span>
       <% end %>
-    </section>
+    </div>
+
+    <div class="all-list-data">    
+      <% if task.complete == true %>
+        <li class = 'to-do complete'>
+      <% else %>
+        <li class = 'to-do'>
+      <% end %> <%= task.name %></li>   
+
+      <section class="icons">
+        <span class="glyphicon glyphicon-pencil pencil" aria-hidden="true"></span>
+        <%= link_to task_path(task.id), method: :delete, :remote => true  do %>
+          <span class="glyphicon glyphicon-trash delete" aria-hidden="true"></span>
+        <% end %>
+      </section>
+    </div>
   </div>
-</div>
 </div>

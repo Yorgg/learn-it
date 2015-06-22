@@ -4,11 +4,11 @@
     <hr> 
     <li><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings </li>
     <hr>
-    <li><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> <%= link_to "Days", new_task_path %> </li>
+    <li><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> <%= link_to "Days", new_task_path %></li>
     <hr>
     <li><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
- <%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>    
-   </ul>
+    <%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>    
+  </ul>
 </nav>
 
 <div class="container righty"> 
@@ -16,16 +16,17 @@
     <div class="row"> 
       <div class="col-md-2">
         <p class="header">Today's Tasks: </p>
+        <div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
       </div> 
-
 	    <div class="col-md-6">      
         <div id ='today-list'>      
           <%= render @tasks %> 
         </div><hr>
-
-        <div class='add-today'><%= render 'tasks/add_task_form' %>  
-        </div>
-
+        <div class='add-today'><%= render 'tasks/add_task_form' %></div>
         <div class='add-task-button'>Add task</div>
 	    </div>
     </div>
