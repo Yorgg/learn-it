@@ -1,4 +1,5 @@
 <div id="task-container-<%=task.id%>">
+
   <% if task.complete %>
     <%= link_to task_path(id: task.id, status: 'change'), {:method => :patch, :remote => true} do %>
       <span class="glyphicon-check check-box glyphicon" aria-hidden="true"></span>

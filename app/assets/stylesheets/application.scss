@@ -46,15 +46,6 @@ input[type="text"] {
   border-radius: 3px;
 }
  
-//* //
-
-.color-1 {
-  color: #B85CB8;
-}
-
-.color-2 {
-  color: #5C8AB8;
-}
 
 body {
   background-color: #fff;
@@ -92,10 +83,10 @@ ul.main-menu {
 }
 
 ul.sub-menu {   
-  padding: 0px 0px 0px 18px;
+  padding: 0px 0px 0px 2px;
   display: none;
   margin: 0px 0px;
-   
+
   li.goals {
     text-transform: none;
          padding-top: 9px;

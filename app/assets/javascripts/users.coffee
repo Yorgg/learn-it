@@ -41,6 +41,6 @@ $(document).on "page:change", ->
     currentHover.element.find('.all-list-data').show()
   )
 
-  $('#goal-list').hover( ->
+  $('#goal-list').hoverIntent( ->
     $('.sub-menu').toggle(240))
  

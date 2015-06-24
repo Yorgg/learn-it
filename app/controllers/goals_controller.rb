@@ -10,10 +10,11 @@ class GoalsController < ApplicationController
   end 
 
   def create 
-  	goal = current_user.build(goal_create_params)
+  	goal = current_user.goals.build(goal_create_params)
     goal.color = current_user.goals.count + 1
     goal.save
-    redirect_to user_path(current_user.id)
+
+    redirect_to goal_path(goal.id)
   end
   
   private
