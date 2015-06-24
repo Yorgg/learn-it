@@ -8,7 +8,6 @@ $(document).on "page:change", ->
     element:  0
 
   $('.entire-task').hoverIntent( ->
-    
     currentHover.element = $(this) 
     $(this) .find('.icons').show(300)
   ,->
@@ -41,4 +40,7 @@ $(document).on "page:change", ->
     currentHover.element.find('.edit-task-form').hide()
     currentHover.element.find('.all-list-data').show()
   )
+
+  $('#goal-list').hover( ->
+    $('.sub-menu').toggle(240))
  

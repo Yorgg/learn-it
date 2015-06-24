@@ -10,11 +10,11 @@
   <% end %>
 
   <div class="entire-task">
-  
+
     <div class="edit-task-form">
       <%= form_for(task, remote: true)  do |f| %>
           <%= f.text_field :name, class: 'edit-task-field' %> 
-        <%= f.hidden_field :date, :value => Date.today %>
+        <%= f.hidden_field :date, :value => Date.today %> 
         <br>
         <%= f.submit "Update", class: "btn btn-success btn-sm" %><span class="edit-cancel">cancel</span>
       <% end %>

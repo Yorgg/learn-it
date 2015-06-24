@@ -14,8 +14,6 @@ class TasksController < ApplicationController
     else
       render 'new'
     end
-
-
   end
 
   def update
@@ -51,6 +49,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :date, :complete)
+    params.require(:task).permit(:name, :date, :complete, :goal_id)
   end
 end

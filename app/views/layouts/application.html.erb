@@ -8,6 +8,32 @@
 </head>
 <body>
 
+<nav class="user-col">
+  <ul class="main-menu">
+    <li><%=current_user.name%></li>
+    <hr> 
+
+    <div id="goal-list">
+      <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
+      Goals 
+      </li>
+
+      <li>
+        <ul class="sub-menu">
+          <%= render @goals %>
+        </ul>
+      </li>
+    </div>
+    <hr>
+
+    <li><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> <%= link_to "Days", new_task_path %></li>
+    <hr>
+    <li><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+    <%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>    
+  </ul>
+</nav>
+
+
 <%= yield %>
 
 </body>

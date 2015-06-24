@@ -4,9 +4,8 @@
 
 $green: #5cb85c;
 
-
 .today-tasks {	
-  margin-top: 20px;
+  margin-top: 0px;
   li {
     color: #585858;
     font-size: 17px;
@@ -18,6 +17,7 @@ $green: #5cb85c;
  
 .to-do {
   padding: 4px 0px;
+  font-weight: 300 !important;
   color: #444;
   list-style: none;
   &:after { 
@@ -31,7 +31,6 @@ $green: #5cb85c;
   color: $green !important;
   text-decoration: line-through;
 }
-
 
 .entire-task {
   &:after { 
@@ -48,15 +47,14 @@ $green: #5cb85c;
   position: relative;
   float: left;
   display :none;
-   width: 400px;
-   margin-bottom: 25px;
+  width: 400px;
+  margin-bottom: 25px;
 }
 
 .edit-task-field {
   margin-top: 4px;
   width: 400px;
 }
-
 
 //*** CONTAINER FOR ICONS ***///
 
@@ -82,7 +80,6 @@ $green: #5cb85c;
   float: left;
   &:hover {
     text-decoration: initial !important;
-    color: $green;
   }
 }
 
@@ -92,7 +89,7 @@ $green: #5cb85c;
   float: left;
   &:hover {
     text-decoration: initial !important;
-    color: #ECBE13;
+    color: $green;
   }
 }
 
@@ -150,4 +147,20 @@ $green: #5cb85c;
   text-decoration: underline;
   @extend .hand-cursor;
   padding-left: 12px;
+}
+
+.goal {
+  color: #999;
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: 0px;
+   
+}
+
+#goal-list {
+  cursor: pointer; 
+  cursor: hand;	
+  &:hover {
+
+  }
 }

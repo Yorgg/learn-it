@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :tasks
+  has_many :goals
   validates :name, presence: true, length: { minimum: 4, maximum: 16 }
 
   def self.today_tasks

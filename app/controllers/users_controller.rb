@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   	@task = Task.new
   	@user = current_user
   	@tasks = @user.tasks.where(date: Date.today)
-  	@tomorrow_tasks = @user.tasks.where(date: Date.today+1)  	
+  	@tomorrow_tasks = @user.tasks.where(date: Date.today+1)  
+  	@goals = @user.goals	
   end 
 end

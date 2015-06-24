@@ -48,16 +48,21 @@ input[type="text"] {
  
 //* //
 
+.color-1 {
+  color: #B85CB8;
+}
 
+.color-2 {
+  color: #5C8AB8;
+}
 
 body {
   background-color: #fff;
 }
 
 .user-col {
-	padding-top: 30px;
-	padding-right: 22px;
-	width: 190px;
+	padding: 30px 36px;
+	width: 195px;
 	background-color: #f8f8f8;
 	float: left;
 	position: fixed;
@@ -65,34 +70,70 @@ body {
 	border-color: #f1f1f1;
 	border-right-style: solid;
 	border-width: 2px;
-	ul {	 
-      li {
-      	text-transform: uppercase;
+}
+
+
+ul.main-menu {   
+   padding: 0px 0px 0px 0px;
+   text-transform: uppercase;
+  li {
         list-style: none;
         margin-left: 0px;
         font-size: 12px;
-        font-weight: 700;
-		color: #7f7f7f;
+        font-weight: 800 !important;
+    color: #777;
       a {
         color: #7f7f7f;
       }
-      li:hover{	
-        color: #5AB953; 
+      li:hover{ 
+        text-decoration: underline; 
       }
-    }
   }
 }
 
+ul.sub-menu {   
+  padding: 0px 0px 0px 18px;
+  display: none;
+  margin: 0px 0px;
+   
+  li.goals {
+    text-transform: none;
+         padding-top: 9px;
+        font-size: 13px;
+        font-weight: 400 !important;
+        color: #999;
+        a {
+        color: #999;
+        }
+      li:hover{ 
+        text-decoration: underline;
+      }
+  }
+}
+
+li {
+  font-weight: 400 !important;
+
+}
+
 .righty {
-  margin-left: 225px;
+  margin-left: 240px;
   padding-top: 30px; 
 }
 
 .header {
   color: #585858;
-  font-size: 16px;
-  font-weight: 800;
-  overflow: hidden;
+  font-size: 15px;
+  font-weight: 600;
+ 
+}
+
+.header-to-do {
+padding-left: 20px;
+  color: #585858;
+  font-size: 15px;
+  font-weight: 600;
+ 
 }
 
 .records {
