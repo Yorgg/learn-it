@@ -42,5 +42,9 @@ $(document).on "page:change", ->
   )
 
   $('#goal-list').hoverIntent( ->
-    $('.sub-menu').toggle(240))
+    $('.sub-menu').show(240)
+    $('.glyphicon-chevron-right').toggleClass('glyphicon-chevron-down')
+  ,->
+    $('.sub-menu').hide(240)
+    $('.glyphicon-chevron-right').toggleClass('glyphicon-chevron-down'))
  

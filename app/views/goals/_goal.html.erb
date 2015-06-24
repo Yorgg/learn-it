@@ -1,4 +1,6 @@
-<li class="goals">
-  <span class="glyphicon glyphicon-stop color-<%=goal.color%>"></span> <%=link_to goal.name, goal_path(goal.id) %>
-</li>
- 
+<div class="goal-menu-container">
+  <span class="glyphicon glyphicon-stop color-<%=goal.color%>"></span> 
+  <li class="goals">
+    <%=link_to goal.name, goal_path(goal.id) %>
+  </li>
+</div> 

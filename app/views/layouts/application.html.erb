@@ -11,29 +11,25 @@
 <% if current_user %>
 <nav class="user-col">
   <ul class="main-menu">
-   
     <li><%=link_to current_user.name, user_path(current_user.id) %> </li>
   
     <hr> 
 
     <div id="goal-list">
-      <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
+      <li>
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       Goals 
       </li>
-
       <li>
         <ul class="sub-menu">
           <%= render @goals %>
-
           <br>
-          <li class="goals" data-toggle="modal" data-target="#newGoal"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  Add goal
+          <li class="add-goal" data-toggle="modal" data-target="#newGoal"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  Add goal
           </li> 
         </ul>
       </li>
     </div>
     <hr>
-
-    <!--<li><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> <%= link_to "Days", new_task_path %></li>-->
     
     <li><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
     <%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>    

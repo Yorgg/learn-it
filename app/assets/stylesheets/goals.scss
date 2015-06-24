@@ -3,41 +3,75 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-// Color codes for goals
+// Color codes for goals + menu
+
+.goal-color-styling {
+  float: left;
+  position: inline;
+}
+
+.goal-menu-container {
+  padding: 5px 0px
+}
 
 .color-1 {
+  @extend .goal-color-styling;
   color: #428bca;
 }
 
 .color-2 {
+  @extend .goal-color-styling;
   color: #B85CB8;
 } 
 
 .color-3 {
+  @extend .goal-color-styling;
   color: #d9534f;
 } 
 
 .color-4 {
+  @extend .goal-color-styling;
   color: #5bc0de;
 } 
 
 .color-5 {
+  @extend .goal-color-styling;
   color: #5CB85C;
 } 
 
 .color-6 {
+  @extend .goal-color-styling;
   color: #222;
 } 
 
 .color-7 {
+  @extend .goal-color-styling;
   color: #B8B85C; 
 } 
  
 
 .color-8 {
+  @extend .goal-color-styling;
   color: #999;
 } 
 
 .color-9 {
+  @extend .goal-color-styling;
   color: #999;
 } 
+
+// ** //
+
+
+.goal-name {
+  color: #585858;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline;
+  margin: 8px 10px;
+  &:after { 
+    content: "";
+    display: block; 
+    clear: both;
+  }
+}
