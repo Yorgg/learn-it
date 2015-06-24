@@ -6,15 +6,17 @@ class GoalsController < ApplicationController
   	@goal = @user.goals.find(@goal_id)
   	@tasks = @user.tasks.where(date: Date.today, goal_id: @goal_id)
   	@tomorrow_tasks = @user.tasks.where(date: Date.today+1)  
-  	@goals = @user.goals  	 	
+  	@goals = @user.goals 	
   end 
 
   def create 
-  	goal = current_user.goals.build(goal_create_params)
-    goal.color = current_user.goals.count + 1
-    goal.save
-
-    redirect_to goal_path(goal.id)
+  	@goal = current_user.goals.build(goal_create_params)
+    @goal.color = current_user.goals.count + 1
+    if @goal.save
+      redirect_to @goal
+    else
+      redirect_to user_path(current_user.id)
+    end
   end
   
   private

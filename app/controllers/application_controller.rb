@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def new_goal
-  	@new_goal = Goal.new	
+  	@new_goal = Goal.new
   end
 end
