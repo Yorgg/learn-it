@@ -16,7 +16,7 @@ $green: #5cb85c;
 }
  
 .to-do {
-  padding: 4px 0px;
+  padding: 4px 0px 0px 58px;
   font-weight: 300 !important;
   color: #444;
   list-style: none;
@@ -78,6 +78,7 @@ $green: #5cb85c;
   padding-top: 4px;
   margin-right: 20px;
   float: left;
+  position: inline;
   &:hover {
     text-decoration: initial !important;
   }
