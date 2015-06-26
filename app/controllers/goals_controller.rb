@@ -7,6 +7,17 @@ class GoalsController < ApplicationController
   	@tasks = @user.tasks.where(date: Date.today, goal_id: @goal_id)
   	@tomorrow_tasks = @user.tasks.where(date: Date.today+1)  
   	@goals = @user.goals 	
+
+    #to do: clean this up!
+    @user_tasks_goal = @user.tasks.select("date(date) as day, count(id) as tasks").where("goal_id = ?", @goal_id).group("date(date)")
+    @complete_tasks = current_user.tasks.group("date(date)").where("complete = ? AND goal_id = ?", true, @goal_id).count
+ 
+    @cmon = {}
+
+    @user_tasks_goal.each {|d| @complete_tasks[d.day] = @complete_tasks[d.day].to_f/d.tasks}
+    @complete_tasks.each {|k,v| @cmon[k.to_time.to_i] = v}
+    
+  	@cmon = @cmon.to_json
   end 
 
   def create 
@@ -17,6 +28,15 @@ class GoalsController < ApplicationController
     else
       redirect_to user_path(current_user.id)
     end
+  end
+
+  def destroy
+    @goal= current_user.goals.find(params[:id])
+    @goal.destroy
+    respond_to do |format|
+        format.html {redirect_to user_path(current_user.id)}
+        format.js { render :action => "delete.js.erb" }
+    end 
   end
   
   private

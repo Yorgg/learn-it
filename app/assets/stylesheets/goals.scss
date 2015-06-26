@@ -62,7 +62,6 @@
 
 // ** //
 
-
 .goal-name {
   color: #585858;
   font-size: 15px;
@@ -74,4 +73,30 @@
     display: block; 
     clear: both;
   }
+}
+
+.goal-menu-icon {
+  float: right;
+  display: block-inline
+}
+
+.cal-heatmap-container rect.now {
+    stroke: #333 !important;
+}
+
+// Heatmap Colors //
+
+.q1 {
+  background-color: #dadeb3 !important;
+  fill: #dadeb3 !important;
+}
+
+.q2 {
+  background-color: #aedcae !important;
+  fill: #aedcae !important;
+}
+
+.q3 {
+  background-color: #5CB85C !important;
+  fill: #5CB85C !important;
 }

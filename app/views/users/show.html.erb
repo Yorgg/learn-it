@@ -2,7 +2,7 @@
   <h1 class="goal-name"> 
   <span class="glyphicon glyphicon-stop blue"></span> Your summary 
   </h1><br>
-  <img src="http://i.stack.imgur.com/JKxGL.png"></img>
+  <div id="cal-heatmap"></div>  
   <br>
   <br>
   <br>
@@ -18,4 +18,7 @@
 	    </div>
     </div>
   </section>
+
+   <%= content_tag :div, class: "heatmap-data", data: {cmon: @cmon} do %>
+  <% end %>
 </div>

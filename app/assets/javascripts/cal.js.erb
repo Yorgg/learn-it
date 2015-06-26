@@ -1,0 +1,22 @@
+ 
+
+$(document).on('ready page:load', function () {
+  
+  var val = $('.heatmap-data').data('cmon')
+  var cal = new CalHeatMap();
+    cal.init({
+	domain: "year",
+	subDomain: "day",
+	data: val,
+	start: new Date(2015, 0),
+	cellSize: 11,
+	cellPadding: 4,
+	range: 1,
+	highlight: ["now"],
+	itemName: "task",
+	displayLegend: false,
+	legend: [.5, .7]
+  });
+});
+
+ 

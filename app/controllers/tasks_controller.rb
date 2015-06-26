@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-
   def new
     @task = Task.new
   end
@@ -39,7 +38,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task = current_user.tasks.find(params[:id])
-    @task.delete
+    @task.destroy
     respond_to do |format|
         format.html {redirect_to user_path(current_user.id)}
         format.js { render :action => "delete.js.erb" }

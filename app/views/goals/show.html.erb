@@ -1,6 +1,18 @@
 <div class="container righty"> 
- <span class="glyphicon glyphicon-stop color-<%=@goal.color%>"></span> <h1 class="goal-name"> <%= @goal.name %> </h1><br>
-  <img src="http://i.stack.imgur.com/JKxGL.png"></img>
+  <div class="row"> 
+
+  
+    <div class="col-xs-4">
+      <span class="glyphicon glyphicon-stop color-<%=@goal.color%>"></span> <h1 class="goal-name"> <%= @goal.name %> </h1>
+    </div>
+    <div class="col-xs-5">      
+      <%= link_to goal_path(@goal.id), method: :delete, data: {confirm: "Delete this goal?"}   do %>
+        <span class="glyphicon glyphicon-trash delete goal-menu-icon" aria-hidden="true"></span>
+      <% end %>
+    </div>
+  </div>
+
+ <div id="cal-heatmap"></div>
   <br>
   <br>
   <br>
@@ -18,4 +30,8 @@
 	    </div>
     </div>
   </section>
+
+   
+  <%= content_tag :div, class: "heatmap-data", data: {cmon: @cmon} do %>
+  <% end %>
 </div>

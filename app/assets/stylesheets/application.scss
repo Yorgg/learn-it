@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require cal-heatmap
  */
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -128,8 +131,6 @@ li {
   margin-left: 240px;
   padding-top: 30px; 
 }
-
-
 
 .header-to-do {
   padding-left: 20px;

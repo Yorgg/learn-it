@@ -7,6 +7,10 @@ gem 'devise'
 
 gem 'rails_12factor', group: :production
 
+#cal heatmap
+gem 'd3_rails'
+gem 'cal-heatmap-rails', github: 'pavolzbell/cal-heatmap-rails', branch: :master
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
